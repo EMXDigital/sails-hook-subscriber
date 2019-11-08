@@ -36,6 +36,11 @@ module.exports = function(sails) {
 
     //workers loader
     function initializeWorkers(config) {
+        // only run jobs on job server
+        // if flag is disabled, do not initialize workers.
+        if (typeof local_disable_job_processing !== "undefined" && local_disable_job_processing === true) return;
+
+
         //find all workers
         //defined at `api/workers`
         var workers = require('include-all')({

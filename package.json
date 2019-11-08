@@ -1,6 +1,6 @@
 {
     "name": "@emxdigital/sails-hook-subscriber",
-    "version": "1.0.3",
+    "version": "1.1.0",
     "description": "Kue based job subscriber(consumer and workers pool) for sails",
     "main": "index.js",
     "scripts": {
@@ -19,10 +19,12 @@
         "url": "hhttps://github.com/lykmapipo/sails-hook-subscriber/issues"
     },
     "homepage": "https://github.com/lykmapipo/sails-hook-subscriber",
-    "contributors": [{
-        "name": "lykmapipo",
-        "github": "https://github.com/lykmapipo"
-    }],
+    "contributors": [
+        {
+            "name": "lykmapipo",
+            "github": "https://github.com/lykmapipo"
+        }
+    ],
     "keywords": [
         "sails",
         "kue",
