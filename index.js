@@ -38,7 +38,13 @@ module.exports = function(sails) {
     function initializeWorkers(config) {
         // only run jobs on job server
         // if flag is disabled, do not initialize workers.
-        if (typeof local_disable_job_processing !== "undefined" && local_disable_job_processing === true) return;
+        if (typeof local_disable_job_processing !== "undefined" && local_disable_job_processing === true) {
+            sails.log('sails-hook-subscriber NOT enabling any workers');
+            return;
+        }
+        else {
+            sails.log('sails-hook-subscriber worker initialization commencing');
+        }
 
 
         //find all workers
@@ -71,6 +77,8 @@ module.exports = function(sails) {
                     workerDefinition.perform
                 );
         });
+        sails.log('sails-hook-subscriber worker initialization complete');
+
     }
     /**
      * Extend the default hooks configs with any other global redis config

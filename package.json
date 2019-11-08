@@ -1,6 +1,6 @@
 {
     "name": "@emxdigital/sails-hook-subscriber",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "Kue based job subscriber(consumer and workers pool) for sails",
     "main": "index.js",
     "scripts": {
